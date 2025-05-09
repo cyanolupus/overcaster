@@ -1,0 +1,8 @@
+/target
+**/*.rs.bk
+wasm-pack.log
+build/
+package-lock.json
+package.json
+node_modules/
+.wrangler/

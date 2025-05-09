@@ -1,0 +1,29 @@
+{
+	"name": "overcaster",
+	"compatibility_date": "2025-05-09",
+    "main": "build/worker/shim.mjs",
+    "vars": {
+        "WORKERS_RS_VERSION": "0.5.0"
+    },
+    "routes": [
+        "overcaster.cyanolup.us/*"
+    ],
+
+    "r2_buckets": [
+        {
+            "binding": "BUCKET",
+            "bucket_name": "overcaster",
+            "preview_bucket_name": "overcaster"
+        }
+    ],
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "overcaster",
+            "database_id": "f056b337-c81d-4b90-8f72-bc134846c4b2"
+        }
+    ],
+	"build": {
+		"command": "cargo install -q worker-build && worker-build --release",
+	}
+}
